@@ -1,0 +1,32 @@
+name: Build IPA
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      - name: Build archive
+        run: |
+          xcodebuild clean archive \
+            -project WordFlow.xcodeproj \
+            -scheme WordFlow \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath build/WordFlow.xcarchive \
+            CODE_SIGNING_ALLOWED=NO
+      - name: Export IPA
+        run: |
+          mkdir -p build/export
+          xcodebuild -exportArchive \
+            -archivePath build/WordFlow.xcarchive \
+            -exportPath build/export \
+            -exportOptionsPlist ExportOptions.plist \
+            CODE_SIGNING_ALLOWED=NO
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: WordFlow.ipa
+          path: build/export/*.ipa
