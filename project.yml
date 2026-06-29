@@ -7,13 +7,12 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    TARGETED_DEVICE_FAMILY: "1"
 
 targets:
   WordFlow:
     type: application
     platform: iOS
-    sources: 
+    sources:
       - App
       - Core
       - Features
@@ -23,4 +22,5 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.vextwizzy.WordFlow
         INFOPLIST_FILE: Resources/Info.plist
-        DEVELOPMENT_TEAM: ""
+    info:
+      path: Resources/Info.plist

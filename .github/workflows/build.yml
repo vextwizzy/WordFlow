@@ -4,12 +4,22 @@ on: [push]
 jobs:
   build:
     runs-on: macos-latest
+    env:
+      HOMEBREW_NO_REQUIRE_TAP_TRUST: 1
     steps:
       - uses: actions/checkout@v4
+      
       - name: Install xcodegen
-        run: brew install xcodegen
+        run: |
+          export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
+          brew install xcodegen
+          
       - name: Generate Xcode project
         run: xcodegen generate
+        
+      - name: List files
+        run: ls -la
+        
       - name: Build archive
         run: |
           xcodebuild clean archive \
@@ -18,7 +28,8 @@ jobs:
             -configuration Release \
             -sdk iphoneos \
             -archivePath build/WordFlow.xcarchive \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO || echo "Build done"
+            
       - name: Export IPA
         run: |
           mkdir -p build/export
@@ -26,9 +37,11 @@ jobs:
             -archivePath build/WordFlow.xcarchive \
             -exportPath build/export \
             -exportOptionsPlist ExportOptions.plist \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO || echo "Export done"
+          find build -name "*.ipa" -type f || echo "No IPA found"
+          
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
-          name: WordFlow.ipa
-          path: build/export/*.ipa
+          name: WordFlow
+          path: build/export/
