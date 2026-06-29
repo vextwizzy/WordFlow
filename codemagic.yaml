@@ -4,22 +4,18 @@ workflows:
     environment:
       xcode: 16.0
     scripts:
-      - name: Install xcodegen
-        script: brew install xcodegen
       - name: Generate Xcode project
-        script: xcodegen generate
-      - name: Build IPA
         script: |
-          xcodebuild clean archive \
-            -project WordFlow.xcodeproj \
+          brew install xcodegen
+          xcodegen generate
+          ls -la
+          xcodebuild -list
+      - name: Build
+        script: |
+          xcodebuild -project WordFlow.xcodeproj \
             -scheme WordFlow \
+            -configuration Release \
             -sdk iphoneos \
-            -archivePath build/WordFlow.xcarchive \
-            CODE_SIGNING_ALLOWED=NO
-          xcodebuild -exportArchive \
-            -archivePath build/WordFlow.xcarchive \
-            -exportPath build \
-            -exportOptionsPlist ExportOptions.plist \
-            CODE_SIGNING_ALLOWED=NO
+            build CODE_SIGNING_ALLOWED=NO
     artifacts:
-      - build/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
