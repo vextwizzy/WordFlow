@@ -1,0 +1,38 @@
+*.xcuserstate
+*.xcuserdata
+*.xcworkspace
+*.DS_Store
+*.build/
+DerivedData/
+.build/
+.build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.packages/
+.build/
+
+# CocoaPods
+Pods/
+
+# Signing
+*.mobileprovision
+*.provisionprofile
+
+# API Keys
+APIKeys.swift
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Logs
+*.log

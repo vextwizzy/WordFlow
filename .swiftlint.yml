@@ -1,0 +1,72 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - identifier_name
+  - type_body_length
+  - file_length
+  - function_body_length
+
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - closure_spacing
+  - contains_over_first_not_nil
+  - convenience_type
+  - discouraged_object_literal
+  - empty_xctest_method
+  - explicit_init
+  - fallthrough
+  - first_where
+  - for_where
+  - implicit_return
+  - joined_default_parameter
+  - legacy_random
+  - let_var_whitespace
+  - multiline_parameters
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - single_test_class
+  - strict_fileprivate
+  - switch_case_on_newline
+  - unneeded_parentheses_in_closure_argument
+  - xct_specific_matcher
+
+analyzer_rules:
+  - unused_import
+  - unused_declaration
+
+excluded:
+  - DerivedData
+  - .build
+  - Pods
+
+nesting:
+  type_level: 3
+
+function_parameter_count: 8
+
+cyclomatic_complexity: 15
+
+large_tuple: 3
+
+type_name:
+  max_length:
+    warning: 60
+    error: 80
+
+identifier_name:
+  max_length:
+    warning: 60
+    error: 80
+  min_length:
+    error: 1
+
+reporter: "xcode"

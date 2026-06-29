@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "english": "Journey",
+      "transcription": "/ˈdʒɜːrni/",
+      "translation": "Путешествие",
+      "explanation": "A journey is when you travel from one place to another, usually over a long distance.",
+      "example": "I went on a long journey across Europe last summer.",
+      "association": "Imagine going on a long adventure with a backpack.",
+      "difficulty": "beginner",
+      "category": "Travel"
+    },
+    {
+      "english": "Courage",
+      "transcription": "/ˈkʌrɪdʒ/",
+      "translation": "Смелость",
+      "explanation": "Courage is the ability to do something that frightens you or is difficult.",
+      "example": "It takes courage to speak in front of a large audience.",
+      "association": "Think of a lion - brave and fearless.",
+      "difficulty": "intermediate",
+      "category": "Emotions"
+    },
+    {
+      "english": "Wisdom",
+      "transcription": "/ˈwɪzdəm/",
+      "translation": "Мудрость",
+      "explanation": "Wisdom is the quality of having experience, knowledge, and good judgment.",
+      "example": "With age comes wisdom and understanding.",
+      "association": "Picture an old owl sitting on a tree - wise and thoughtful.",
+      "difficulty": "intermediate",
+      "category": "Character"
+    },
+    {
+      "english": "Adventure",
+      "transcription": "/ədˈventʃər/",
+      "translation": "Приключение",
+      "explanation": "An adventure is an exciting experience or journey that involves some risk.",
+      "example": "Life is an adventure - embrace every moment!",
+      "association": "Think of Indiana Jones exploring ancient temples.",
+      "difficulty": "beginner",
+      "category": "Travel"
+    },
+    {
+      "english": "Harmony",
+      "transcription": "/ˈhɑːrməni/",
+      "translation": "Гармония",
+      "explanation": "Harmony is a state of peaceful agreement and cooperation between people or things.",
+      "example": "They lived in perfect harmony with nature.",
+      "association": "Imagine a beautiful symphony where all instruments play together.",
+      "difficulty": "advanced",
+      "category": "Abstract"
+    },
+    {
+      "english": "Persistence",
+      "transcription": "/pərˈsɪstəns/",
+      "translation": "Настойчивость",
+      "explanation": "Persistence is continuing to do something despite difficulties or opposition.",
+      "example": "Success requires persistence and hard work.",
+      "association": "Think of water drops that eventually carve through stone.",
+      "difficulty": "advanced",
+      "category": "Character"
+    },
+    {
+      "english": "Serendipity",
+      "transcription": "/ˌserənˈdɪpəti/",
+      "translation": "Счастливая случайность",
+      "explanation": "Serendipity is finding something good or useful by chance.",
+      "example": "Meeting my best friend was pure serendipity.",
+      "association": "Finding a $20 bill in your old jacket pocket.",
+      "difficulty": "expert",
+      "category": "Abstract"
+    },
+    {
+      "english": "Resilience",
+      "transcription": "/rɪˈzɪliəns/",
+      "translation": "Устойчивость",
+      "explanation": "Resilience is the ability to recover quickly from difficulties.",
+      "example": "The team showed great resilience after the defeat.",
+      "association": "Like a rubber band that returns to its shape after stretching.",
+      "difficulty": "advanced",
+      "category": "Character"
+    },
+    {
+      "english": "Enthusiasm",
+      "transcription": "/ɪnˈθuːziæzəm/",
+      "translation": "Энтузиазм",
+      "explanation": "Enthusiasm is intense and eager enjoyment or interest in something.",
+      "example": "She approached the project with great enthusiasm.",
+      "association": "Think of a child opening birthday presents - full of excitement!",
+      "difficulty": "intermediate",
+      "category": "Emotions"
+    },
+    {
+      "english": "Perspective",
+      "transcription": "/pərˈspektɪv/",
+      "translation": "Точка зрения",
+      "explanation": "Perspective is a particular way of viewing or understanding something.",
+      "example": "Traveling gives you a new perspective on life.",
+      "association": "Looking at a painting from different angles changes what you see.",
+      "difficulty": "intermediate",
+      "category": "Abstract"
+    }
+  ]
+}
