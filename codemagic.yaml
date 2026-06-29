@@ -1,0 +1,30 @@
+workflows:
+  ios-app:
+    name: WordFlow
+    environment:
+      vars:
+        XCODE_WORKSPACE: "WordFlow.xcodeproj"
+        XCODE_SCHEME: "WordFlow"
+      xcode: 16.0
+    scripts:
+      - name: Build IPA
+        script: |
+          xcodebuild clean build \
+            -project "$XCODE_WORKSPACE" \
+            -scheme "$XCODE_SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath build/WordFlow.xcarchive \
+            CODE_SIGNING_ALLOWED=NO
+          mkdir -p build/export
+          xcodebuild -exportArchive \
+            -archivePath build/WordFlow.xcarchive \
+            -exportPath build/export \
+            -exportOptionsPlist ExportOptions.plist \
+            CODE_SIGNING_ALLOWED=NO
+    artifacts:
+      - build/export/*.ipa
+    publishing:
+      email:
+        recipients:
+          - vextwizzy@gmail.com
