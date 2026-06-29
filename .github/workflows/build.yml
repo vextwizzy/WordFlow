@@ -1,3 +1,4 @@
+Add-Content -Path ".github/workflows/build.yml" -Value @"
 name: Build IPA
 on: [push]
 
@@ -6,8 +7,13 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Xcode
-        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
       - name: Build archive
         run: |
           xcodebuild clean archive \
@@ -16,7 +22,11 @@ jobs:
             -configuration Release \
             -sdk iphoneos \
             -archivePath build/WordFlow.xcarchive \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_STYLE=Manual \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            | xcpretty || true
+
       - name: Export IPA
         run: |
           mkdir -p build/export
@@ -24,9 +34,12 @@ jobs:
             -archivePath build/WordFlow.xcarchive \
             -exportPath build/export \
             -exportOptionsPlist ExportOptions.plist \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty || true
+
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
           name: WordFlow.ipa
           path: build/export/*.ipa
+"@ -Encoding UTF8
