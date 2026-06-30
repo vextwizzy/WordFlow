@@ -50,7 +50,7 @@ final class Quiz {
     }
 }
 
-enum QuizType: String, Codable {
+enum QuizType: String, Codable, CaseIterable {
     case translation = "Translation"
     case fillInBlank = "Fill in the Blank"
     case multipleChoice = "Multiple Choice"

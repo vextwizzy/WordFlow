@@ -242,7 +242,7 @@ struct ProfileView: View {
                 Button(action: { showAchievements = true }) {
                     Text("View All")
                         .font(.bodySmall)
-                        .foregroundStyle(.brandPrimary)
+                        .foregroundStyle(Color.brandPrimary)
                 }
             }
             

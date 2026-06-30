@@ -175,7 +175,7 @@ struct StatisticsView: View {
                             x: .value("Date", stat.date, unit: .day),
                             y: .value("Minutes", stat.studyTime / 60)
                         )
-                        .foregroundStyle(.success)
+                        .foregroundStyle(Color.success)
                         .interpolationMethod(.catmullRom)
                         
                         AreaMark(
@@ -236,7 +236,7 @@ struct StatisticsView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         HStack {
                             Circle()
-                                .fill(.success)
+                                .fill(Color.success)
                                 .frame(width: 12, height: 12)
                             
                             Text("Correct")

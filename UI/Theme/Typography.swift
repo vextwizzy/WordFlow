@@ -30,21 +30,21 @@ extension Font {
 extension View {
     func headingStyle() -> some View {
         self.font(.title1)
-            .foregroundStyle(.textPrimary)
+            .foregroundStyle(Color.textPrimary)
     }
     
     func subheadingStyle() -> some View {
         self.font(.title3)
-            .foregroundStyle(.textSecondary)
+            .foregroundStyle(Color.textSecondary)
     }
     
     func bodyStyle() -> some View {
         self.font(.bodyRegular)
-            .foregroundStyle(.textPrimary)
+            .foregroundStyle(Color.textPrimary)
     }
     
     func captionStyle() -> some View {
         self.font(.caption)
-            .foregroundStyle(.textTertiary)
+            .foregroundStyle(Color.textTertiary)
     }
 }

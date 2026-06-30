@@ -102,7 +102,7 @@ struct WordCardView: View {
             // Transcription
             Text(word.transcription)
                 .font(.transcription)
-                .foregroundStyle(.textSecondary)
+                .foregroundStyle(Color.textSecondary)
             
             // Speak button
             Button(action: onSpeak) {
@@ -123,7 +123,7 @@ struct WordCardView: View {
             // Hint to flip
             Text("Tap to see translation")
                 .font(.caption)
-                .foregroundStyle(.textTertiary)
+                .foregroundStyle(Color.textTertiary)
                 .padding(.top, 8)
         }
     }
@@ -135,7 +135,7 @@ struct WordCardView: View {
             // Translation
             Text(word.translation)
                 .font(.system(size: 36, weight: .bold, design: .rounded))
-                .foregroundStyle(.brandPrimary)
+                .foregroundStyle(Color.brandPrimary)
                 .multilineTextAlignment(.center)
             
             Divider()
@@ -146,11 +146,11 @@ struct WordCardView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Label("Explanation", systemImage: "lightbulb.fill")
                         .font(.bodySmall)
-                        .foregroundStyle(.textSecondary)
+                        .foregroundStyle(Color.textSecondary)
                     
                     Text(word.explanation)
                         .font(.bodyRegular)
-                        .foregroundStyle(.textPrimary)
+                        .foregroundStyle(Color.textPrimary)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -162,12 +162,12 @@ struct WordCardView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Label("Example", systemImage: "text.quote")
                         .font(.bodySmall)
-                        .foregroundStyle(.textSecondary)
+                        .foregroundStyle(Color.textSecondary)
                     
                     Text(word.example)
                         .font(.bodyRegular)
                         .italic()
-                        .foregroundStyle(.textPrimary)
+                        .foregroundStyle(Color.textPrimary)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -195,7 +195,7 @@ struct WordCardView: View {
             // Category
             Text(word.category)
                 .font(.caption)
-                .foregroundStyle(.textTertiary)
+                .foregroundStyle(Color.textTertiary)
             
             Spacer()
             

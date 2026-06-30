@@ -286,7 +286,7 @@ struct ProductCard: View {
                                     .padding(.vertical, 4)
                                     .background(
                                         Capsule()
-                                            .fill(.success)
+                                            .fill(Color.success)
                                     )
                             }
                         }

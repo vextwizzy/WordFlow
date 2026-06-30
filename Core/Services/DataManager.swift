@@ -306,5 +306,3 @@ final class DataManager {
         }
     }
 }
-
-extension QuizType: CaseIterable {}

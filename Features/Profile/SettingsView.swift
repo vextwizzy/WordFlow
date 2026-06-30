@@ -83,7 +83,7 @@ struct SettingsView: View {
                         if !profile.isPremium {
                             Button(action: {}) {
                                 Label("Upgrade to Premium", systemImage: "star.fill")
-                                    .foregroundStyle(.brandPrimary)
+                                    .foregroundStyle(Color.brandPrimary)
                             }
                         }
                     } header: {
@@ -94,7 +94,7 @@ struct SettingsView: View {
                     Section {
                         Button(action: { showResetConfirmation = true }) {
                             Label("Reset Progress", systemImage: "arrow.counterclockwise")
-                                .foregroundStyle(.error)
+                                .foregroundStyle(Color.error)
                         }
                         
                         Button(action: {}) {

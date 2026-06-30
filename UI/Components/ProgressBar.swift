@@ -34,7 +34,7 @@ struct ProgressBar: View {
             if showPercentage {
                 Text("\(Int(progress * 100))%")
                     .font(.caption)
-                    .foregroundStyle(.textSecondary)
+                    .foregroundStyle(Color.textSecondary)
             }
         }
     }
@@ -62,7 +62,7 @@ struct CircularProgressBar: View {
             // Percentage text
             Text("\(Int(progress * 100))%")
                 .font(.system(size: size * 0.25, weight: .bold, design: .rounded))
-                .foregroundStyle(.textPrimary)
+                .foregroundStyle(Color.textPrimary)
         }
         .frame(width: size, height: size)
     }

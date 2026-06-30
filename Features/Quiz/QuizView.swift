@@ -165,7 +165,7 @@ struct QuizView: View {
                 VStack(spacing: 16) {
                     HStack {
                         Label("Correct", systemImage: "checkmark.circle.fill")
-                            .foregroundStyle(.success)
+                            .foregroundStyle(Color.success)
                         Spacer()
                         Text("\(viewModel.correctAnswers)")
                             .font(.title3)
@@ -177,7 +177,7 @@ struct QuizView: View {
                     
                     HStack {
                         Label("Wrong", systemImage: "xmark.circle.fill")
-                            .foregroundStyle(.error)
+                            .foregroundStyle(Color.error)
                         Spacer()
                         Text("\(viewModel.wrongAnswers)")
                             .font(.title3)

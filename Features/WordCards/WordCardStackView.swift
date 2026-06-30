@@ -115,7 +115,7 @@ struct WordCardStackView: View {
                 // Don't know indicator (left)
                 Image(systemName: "xmark.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundStyle(.error)
+                    .foregroundStyle(Color.error)
                     .opacity(min(abs(viewModel.dragOffset.width) / 150, 1.0))
             }
             
@@ -125,7 +125,7 @@ struct WordCardStackView: View {
                 // Know indicator (right)
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 60))
-                    .foregroundStyle(.success)
+                    .foregroundStyle(Color.success)
                     .opacity(min(viewModel.dragOffset.width / 150, 1.0))
             }
         }
@@ -167,7 +167,7 @@ struct WordCardStackView: View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.circle.fill")
                 .font(.system(size: 80))
-                .foregroundStyle(.success)
+                .foregroundStyle(Color.success)
             
             Text("Great job!")
                 .font(.title1)

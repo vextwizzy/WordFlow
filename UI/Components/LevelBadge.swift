@@ -49,13 +49,13 @@ struct LevelProgressBar: View {
             HStack {
                 Text("Level Progress")
                     .font(.bodySmall)
-                    .foregroundStyle(.textSecondary)
+                    .foregroundStyle(Color.textSecondary)
                 
                 Spacer()
                 
                 Text("\(currentXP) / \(requiredXP) XP")
                     .font(.bodySmall)
-                    .foregroundStyle(.textSecondary)
+                    .foregroundStyle(Color.textSecondary)
             }
             
             GeometryReader { geometry in

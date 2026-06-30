@@ -3,19 +3,26 @@
 //  WordFlow
 //
 //  Created by WordFlow Team on 29.06.2026.
+//  Updated for iOS 26 design
 //
 
 import SwiftUI
 
 extension Color {
-    // MARK: - Brand Colors
-    static let brandPrimary = Color("BrandPrimary", bundle: nil) ?? Color(hex: "6C5CE7")
-    static let brandSecondary = Color("BrandSecondary", bundle: nil) ?? Color(hex: "A29BFE")
-    static let brandAccent = Color("BrandAccent", bundle: nil) ?? Color(hex: "FD79A8")
+    // MARK: - Brand Colors (iOS 26 Dynamic)
+    static let brandPrimary = Color(hex: "6C5CE7")
+    static let brandSecondary = Color(hex: "A29BFE")
+    static let brandAccent = Color(hex: "FD79A8")
     
-    // MARK: - Glassmorphism
-    static let glassBackground = Color.white.opacity(0.1)
-    static let glassBorder = Color.white.opacity(0.2)
+    // MARK: - iOS 26 Mesh Gradient Colors
+    static let meshStart = Color(hex: "667EEA")
+    static let meshMiddle = Color(hex: "764BA2")
+    static let meshEnd = Color(hex: "F093FB")
+    
+    // MARK: - Glassmorphism (Enhanced for iOS 26)
+    static let glassBackground = Color.white.opacity(0.08)
+    static let glassBorder = Color.white.opacity(0.15)
+    static let glassHighlight = Color.white.opacity(0.25)
     
     // MARK: - Gradients
     static let gradientStart = Color(hex: "6C5CE7")
@@ -27,7 +34,7 @@ extension Color {
     static let errorGradientStart = Color(hex: "FF7675")
     static let errorGradientEnd = Color(hex: "FD79A8")
     
-    // MARK: - Semantic Colors
+    // MARK: - Semantic Colors (iOS 26 Enhanced)
     static let success = Color(hex: "00B894")
     static let error = Color(hex: "FF7675")
     static let warning = Color(hex: "FDCB6E")
@@ -38,11 +45,12 @@ extension Color {
     static let streakFire = Color(hex: "E74C3C")
     static let levelStar = Color(hex: "F1C40F")
     
-    // MARK: - Card Colors
+    // MARK: - Card Colors (iOS 26 Depth)
     static let cardBackground = Color(hex: "1E1E1E")
     static let cardBackgroundLight = Color.white
+    static let cardShadow = Color.black.opacity(0.12)
     
-    // MARK: - Text Colors
+    // MARK: - Text Colors (iOS 26 Adaptive)
     static let textPrimary = Color.primary
     static let textSecondary = Color.secondary
     static let textTertiary = Color.gray
@@ -74,7 +82,7 @@ extension Color {
     }
 }
 
-// MARK: - Gradient Presets
+// MARK: - iOS 26 Mesh Gradients
 extension LinearGradient {
     static let brandGradient = LinearGradient(
         colors: [.gradientStart, .gradientEnd],
@@ -99,4 +107,22 @@ extension LinearGradient {
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
+    
+    // iOS 26 Mesh Gradient
+    static let meshGradient = LinearGradient(
+        colors: [.meshStart, .meshMiddle, .meshEnd],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
 }
+
+// MARK: - iOS 26 Angular Gradients
+extension AngularGradient {
+    static let dynamicRing = AngularGradient(
+        colors: [.brandPrimary, .brandAccent, .brandSecondary, .brandPrimary],
+        center: .center,
+        startAngle: .degrees(0),
+        endAngle: .degrees(360)
+    )
+}
+

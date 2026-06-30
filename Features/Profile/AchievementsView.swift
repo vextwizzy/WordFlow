@@ -175,7 +175,7 @@ struct AchievementRow: View {
                     if achievement.isUnlocked {
                         HStack(spacing: 8) {
                             Image(systemName: "checkmark.circle.fill")
-                                .foregroundStyle(.success)
+                                .foregroundStyle(Color.success)
                             
                             if let unlockedDate = achievement.unlockedAt {
                                 Text("Unlocked \(unlockedDate, style: .relative) ago")
